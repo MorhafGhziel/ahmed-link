@@ -2,62 +2,76 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+    <div className="min-h-screen bg-gray-900">
+      <main className="flex min-h-screen flex-col items-center justify-center px-4 py-16">
+        <div className="w-full max-w-sm">
+          {/* Profile Section */}
+          <div className="mb-16 flex flex-col items-center">
+            {/* Profile Picture */}
+            <div className="mb-8">
+              <Image
+                src="/images/Ahmed2.png"
+                alt="Ahmed Ghziel"
+                width={120}
+                height={120}
+                className="rounded-full border-2 border-white/10 object-cover"
+                priority
+              />
+            </div>
+            
+            {/* Name */}
+            <h1 className="text-2xl font-semibold text-white mb-2 tracking-tight">
+              Ahmed Ghziel
+            </h1>
+            
+            {/* Title */}
+            <p className="text-gray-400 text-sm font-normal">
+              Dentist
+            </p>
+          </div>
+
+          {/* Links Section */}
+          <div className="space-y-3 mb-12">
+            {/* Website Link */}
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="https://ahmedghziel.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-center w-full px-6 py-4 bg-white rounded-lg hover:bg-gray-50 transition-all duration-200"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
+              <svg className="w-5 h-5 mr-3 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+              </svg>
+              <span className="text-gray-900 font-medium">Visit Website</span>
+            </a>
+
+            {/* Phone Link */}
             <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="tel:+995599423129"
+              className="group flex items-center justify-center w-full px-6 py-4 bg-white rounded-lg hover:bg-gray-50 transition-all duration-200"
             >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+              <svg className="w-5 h-5 mr-3 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span className="text-gray-900 font-medium">Call Me</span>
+            </a>
+
+            {/* Email Link */}
+            <a
+              href="mailto:ahmedghziel@gmail.com"
+              className="group flex items-center justify-center w-full px-6 py-4 bg-white rounded-lg hover:bg-gray-50 transition-all duration-200"
+            >
+              <svg className="w-5 h-5 mr-3 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span className="text-gray-900 font-medium">Email Me</span>
+            </a>
+          </div>
+
+          {/* Footer */}
+          <div className="text-center text-xs text-gray-500">
+            <p>© 2025 Ahmed Ghziel</p>
+          </div>
         </div>
       </main>
     </div>
