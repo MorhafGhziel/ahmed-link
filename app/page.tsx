@@ -58,7 +58,7 @@ const links = [
     external: true,
   },
   {
-    href: "tel:+995599423129",
+    href: "tel:+966594702048",
     label: "Call Me",
     icon: (
       <svg
